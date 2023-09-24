@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    /* thia is written in order to eliminate scrollbar */
+}
+
+.gamecontainer {
+    background: url('bg.png');
+    width: 100vw;
+    height: 100vh;
+    background-size: 100vw 100vh;
+    /* above lines must be used in every webpage if size of image is not matching the browser size */
+}
+
+.over {
+    visibility: hidden;
+    position: relative;
+    top: 50px;
+    font-size: 43px;
+    text-align: center;
+}
+
+.dino {
+    background: url('dino.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 125px;
+    width: 244px;
+    position: absolute;
+    bottom: 0;
+    left: 52px;
+}
+
+.obstacle {
+    background: url('dragon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 166px;
+    height: 112px;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+}
+
+#score {
+    position: relative;
+    left: 23px;
+    top: 24px;
+    border: 2px solid black;
+    padding: 10px;
+    width: 112px;
+}
+
+.animatedino {
+    animation: d 0.6s linear;
+}
+
+.animateobstacle {
+    animation: o 2s linear infinite;
+}
+
+@keyframes d {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 420px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes o {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -10vw;
+    }
+}
